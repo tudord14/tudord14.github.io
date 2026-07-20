@@ -162,7 +162,7 @@ h2 {
   border-radius: 8px;
   padding: 1rem;
   text-align: center;
-  min-height: 120px;
+  min-height: 60px;
 }
 .map-fallback { color: var(--text-soft); font-size: 0.85rem; font-weight: 300; }
 
