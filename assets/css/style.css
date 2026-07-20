@@ -1,0 +1,186 @@
+/* ===== Theme variables ===== */
+:root {
+  --bg: #ffffff;
+  --surface: #f7f8f9;
+  --text: #2b2b2b;
+  --text-soft: #5f6368;
+  --accent: #2e7bd6;         /* Mahito-style clean blue links */
+  --border: #e8e9eb;
+  --nav-bg: rgba(255,255,255,0.9);
+}
+[data-theme="dark"] {
+  --bg: #16181c;
+  --surface: #1e2126;
+  --text: #e6e7e9;
+  --text-soft: #9aa0a6;
+  --accent: #6ea8fe;
+  --border: #2a2e34;
+  --nav-bg: rgba(22,24,28,0.9);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Nunito Sans", system-ui, -apple-system, sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* ===== Top nav ===== */
+.topnav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(8px);
+  background: var(--nav-bg);
+  border-bottom: 1px solid var(--border);
+}
+.nav-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0.85rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-links { display: flex; gap: 1.6rem; }
+.nav-links a {
+  color: var(--text-soft);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+.nav-links a:hover, .nav-links a.active { color: var(--accent); }
+
+#theme-toggle {
+  background: none;
+  color: var(--text-soft);
+  border: none;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: color 0.2s ease, transform 0.3s ease;
+}
+#theme-toggle:hover { color: var(--accent); transform: scale(1.12); }
+
+/* ===== Single centered column ===== */
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+/* ===== Intro (text left, photo right) ===== */
+.intro {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 3.5rem;
+}
+.intro-text { flex: 1; }
+.portrait {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  flex-shrink: 0;
+}
+.intro h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-bottom: 1rem;
+}
+.blurb {
+  color: var(--text);
+  font-weight: 300;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+.links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 0.45rem 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  transition: all 0.2s ease;
+}
+.links a:hover { border-color: var(--accent); color: var(--accent); }
+.links i { color: var(--accent); }
+
+/* ===== Sections ===== */
+section { margin-bottom: 3rem; }
+h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.3rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid var(--border);
+}
+
+/* ===== Research ===== */
+.research-item { margin-bottom: 1.6rem; }
+.research-item h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+.research-item p {
+  color: var(--text-soft);
+  font-size: 0.95rem;
+  font-weight: 300;
+}
+
+/* ===== Publications ===== */
+.pub { padding: 0.9rem 0; border-bottom: 1px solid var(--border); }
+.pub:last-child { border-bottom: none; }
+.pub-title { font-weight: 600; font-size: 0.98rem; }
+.pub-authors { color: var(--text-soft); font-size: 0.9rem; font-weight: 300; margin: 0.15rem 0; }
+.pub-venue { font-size: 0.88rem; color: var(--text-soft); font-weight: 300; }
+.pub-venue a { color: var(--accent); text-decoration: none; }
+.pub-venue a:hover { text-decoration: underline; }
+
+/* ===== Visitor map ===== */
+.map-wrap {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  min-height: 120px;
+}
+.map-fallback { color: var(--text-soft); font-size: 0.85rem; font-weight: 300; }
+
+/* ===== Footer ===== */
+footer {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  color: var(--text-soft);
+  font-size: 0.83rem;
+  font-weight: 300;
+  text-align: center;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 560px) {
+  .nav-links { gap: 1.1rem; }
+  main { padding-top: 2rem; }
+  .intro { flex-direction: column-reverse; align-items: center; text-align: center; }
+  .links { justify-content: center; }
+}
