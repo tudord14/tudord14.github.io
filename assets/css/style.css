@@ -98,9 +98,9 @@ main {
 }
 .blurb {
   color: var(--text);
-  font-weight: 300;
-  font-size: 0.9rem;
-  margin-bottom: 1.5rem;
+  font-weight: 320;
+  font-size: 1rem;
+  margin-bottom: 1.2rem;
 }
 .blurb a { color: var(--accent); text-decoration: none; }
 .blurb a:hover { text-decoration: underline; }
