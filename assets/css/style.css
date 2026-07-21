@@ -104,6 +104,12 @@ main {
 }
 .blurb a { color: var(--accent); text-decoration: none; }
 .blurb a:hover { text-decoration: underline; }
+.email-line {
+  color: var(--text-soft);
+  font-size: 0.92rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
 .blurb-bold {
   font-weight: 700;
   color: var(--text);
