@@ -102,9 +102,16 @@ main {
   font-size: 1rem;
   margin-bottom: 1.5rem;
 }
+.blurb a { color: var(--accent); text-decoration: none; }
+.blurb a:hover { text-decoration: underline; }
+.blurb-bold {
+  font-weight: 700;
+  color: var(--text);
+}
 .links {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 0.7rem;
 }
 .links a {
@@ -121,7 +128,15 @@ main {
   transition: all 0.2s ease;
 }
 .links a:hover { border-color: var(--accent); color: var(--accent); }
-.links i { color: var(--accent); }
+.links i, .links .ai { color: var(--accent); }
+/* Email as plain text, not a pill button */
+.links a.link-text {
+  border: none;
+  padding: 0.45rem 0;
+  font-weight: 400;
+  color: var(--text-soft);
+}
+.links a.link-text:hover { color: var(--accent); }
 
 /* ===== Sections ===== */
 section { margin-bottom: 3rem; }
@@ -133,18 +148,37 @@ h2 {
   border-bottom: 2px solid var(--border);
 }
 
-/* ===== Research ===== */
-.research-item { margin-bottom: 1.6rem; }
-.research-item h3 {
-  font-size: 1.05rem;
-  font-weight: 600;
-  margin-bottom: 0.3rem;
-}
-.research-item p {
-  color: var(--text-soft);
-  font-size: 0.95rem;
+/* ===== News ===== */
+.news-list { list-style: none; }
+.news-list li {
   font-weight: 300;
+  font-size: 0.95rem;
+  color: var(--text);
+  padding: 0.35rem 0;
 }
+.news-date {
+  display: inline-block;
+  min-width: 68px;
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.85rem;
+  margin-right: 0.6rem;
+}
+
+/* ===== Research ===== */
+.research-intro { font-weight: 300; margin-bottom: 0.8rem; }
+.research-list {
+  list-style: disc;
+  padding-left: 1.3rem;
+}
+.research-list li {
+  font-weight: 300;
+  font-size: 0.95rem;
+  color: var(--text);
+  margin-bottom: 1.1rem;
+  line-height: 1.7;
+}
+.research-list li strong { font-weight: 700; }
 
 /* ===== Publications ===== */
 .pub { padding: 0.9rem 0; border-bottom: 1px solid var(--border); }
@@ -155,15 +189,13 @@ h2 {
 .pub-venue a { color: var(--accent); text-decoration: none; }
 .pub-venue a:hover { text-decoration: underline; }
 
-/* ===== Visitor map ===== */
+/* ===== Visitor map (smaller) ===== */
 .map-wrap {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 1rem;
-  text-align: center;
-  min-height: 60px;
+  max-width: 240px;
+  padding: 0.4rem 0;
+  text-align: left;
 }
+.map-wrap img { max-width: 100%; }
 .map-fallback { color: var(--text-soft); font-size: 0.85rem; font-weight: 300; }
 
 /* ===== Footer ===== */
