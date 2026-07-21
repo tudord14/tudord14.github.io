@@ -39,7 +39,7 @@ body {
   border-bottom: 1px solid var(--border);
 }
 .nav-inner {
-  max-width: 720px;
+  max-width: 840px;
   margin: 0 auto;
   padding: 0.85rem 1.5rem;
   display: flex;
