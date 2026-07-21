@@ -9,7 +9,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,300;0,6..12,400;0,6..12,600;0,6..12,700;1,6..12,400&display=swap" rel="stylesheet" />
+  <!-- Font Awesome 6 (brands include Google Scholar icon) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <!-- Academicons: real Google Scholar icon -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.4/css/academicons.min.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
@@ -18,6 +21,7 @@
     <div class="nav-inner">
       <div class="nav-links">
         <a href="#about" class="active">About</a>
+        <a href="#news">News</a>
         <a href="#research">Research</a>
         <a href="#publications">Publications</a>
       </div>
@@ -33,19 +37,23 @@
       <div class="intro-text">
         <h1>Tudor Andrei Diac</h1>
         <p class="blurb">
-          Hi! I'm a recent MSc graduate (Distinction) in Computational Science (Scientific Computing)
-          at Lund University, where I have completed a thesis on the development and 
-          optimization of small language models, under the supervision of 
+          🐉 Hi! I'm a recent MSc graduate (Distinction) in Computational Science
+          (Scientific Computing) at Lund University, where I wrote my thesis on the
+          development and optimization of small language models, supervised by
           <a href="https://www.bjorkelund.org/anders/index.html">Anders Björkelund</a>.
-          Prior to this I completed a BSc in Physics Informatics at University of Bucharest, with a
-          thesis at the Institute of Space Science Romania, in collaboration with the 
-          <a href="https://home.cern/science/experiments/na65/">DsTau(NA65)</a> CERN experiment.
-          
-          
+          Before Lund, I completed a BSc in Physics Informatics at the University of
+          Bucharest, with a thesis carried out at the Institute of Space Science Romania,
+          in collaboration with the
+          <a href="https://home.cern/science/experiments/na65/">DsTau (NA65)</a>
+          experiment at CERN.
+        </p>
+        <p class="blurb blurb-bold">
+          I'm open to all kinds of collaborations, research opportunities, or PhD positions —
+          feel free to reach out.
         </p>
         <div class="links">
-          <a href="mailto:tudordiac2002@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a>
-          <a href="https://scholar.google.com/citations?user=mBvt85gAAAAJ"><i class="fa-solid fa-graduation-cap"></i> Scholar</a>
+          <a class="link-text" href="mailto:tudordiac2002@gmail.com"><i class="fa-solid fa-envelope"></i> tudordiac2002@gmail.com</a>
+          <a href="https://scholar.google.com/citations?user=mBvt85gAAAAJ"><i class="ai ai-google-scholar"></i> Scholar</a>
           <a href="https://github.com/tudord14"><i class="fa-brands fa-github"></i> GitHub</a>
           <a href="assets/pdf/CV.pdf"><i class="fa-solid fa-file-lines"></i> CV</a>
         </div>
@@ -53,12 +61,46 @@
       <img src="assets/img/portrait.jpg" alt="Tudor Andrei Diac" class="portrait" onerror="this.style.display='none'"/>
     </header>
 
+    <!-- ===== NEWS ===== -->
+    <section id="news">
+      <h2>News</h2>
+      <ul class="news-list">
+        <li><span class="news-date">2026.06</span> Completed my MSc in Computational Science (Scientific Computing) at Lund University, with Distinction.</li>
+        <li><span class="news-date">2026</span> Preprint on JEPA-style latent-space learning of nonlinear dynamics in progress.</li>
+        <li><span class="news-date">2025.07</span> Presented a poster on training language models on a novel Romanian corpus at IBWAP, Constanța.</li>
+      </ul>
+    </section>
+
     <!-- ===== RESEARCH ===== -->
     <section id="research">
       <h2>Research</h2>
-      <div>
-        At the moment, my research directions are:
-      </div>
+      <p class="research-intro">At the moment, my research directions are:</p>
+      <ul class="research-list">
+        <li>
+          <strong>Representation and latent-prediction models for dynamical systems.</strong>
+          I train JEPA-style latent-prediction models on families of nonlinear dynamical
+          systems and measure, quantitatively, what they actually internalize about the
+          underlying physics — reading structure directly off the learned embedding
+          manifold rather than relying on qualitative probes. The models recover a smooth,
+          low-dimensional manifold of the governing parameter, reproducible across seeds
+          and across renderings that share no colors, which separates what is learned
+          about the dynamics from the surface appearance.
+        </li>
+        <li>
+          <strong>Efficient, data-centric language models for low-resource languages.</strong>
+          I built a large-scale Romanian corpus and full training pipeline and trained
+          small decoder-only transformers from scratch, releasing quantized builds that
+          run in real time on constrained hardware. The work spans the whole data-centric
+          stack: corpus construction, tokenizer design, training, and on-device deployment.
+        </li>
+        <li>
+          <strong>Computational and statistical foundations of ML.</strong>
+          Across both directions I care about models that are small, interpretable, and
+          calibrated, grounded in numerical methods, Monte Carlo, and statistical modelling —
+          and about measuring what a learned representation genuinely captures rather than
+          taking it on faith.
+        </li>
+      </ul>
     </section>
 
     <!-- ===== PUBLICATIONS ===== -->
