@@ -98,8 +98,8 @@ main {
 }
 .blurb {
   color: var(--text);
-  font-weight: 300;
-  font-size: 1rem;
+  font-weight: 200;
+  font-size: 0.7rem;
   margin-bottom: 1.5rem;
 }
 .blurb a { color: var(--accent); text-decoration: none; }
