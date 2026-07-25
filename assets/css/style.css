@@ -39,7 +39,7 @@ body {
   border-bottom: 1px solid var(--border);
 }
 .nav-inner {
-  max-width: 720px;
+  max-width: 840px;
   margin: 0 auto;
   padding: 0.85rem 1.5rem;
   display: flex;
@@ -68,7 +68,7 @@ body {
 
 /* ===== Single centered column ===== */
 main {
-  max-width: 720px;
+  max-width: 840px;
   margin: 0 auto;
   padding: 3rem 1.5rem;
 }
@@ -98,9 +98,9 @@ main {
 }
 .blurb {
   color: var(--text);
-  font-weight: 300;
+  font-weight: 320;
   font-size: 1rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.2rem;
 }
 .blurb a { color: var(--accent); text-decoration: none; }
 .blurb a:hover { text-decoration: underline; }
