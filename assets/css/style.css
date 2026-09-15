@@ -98,7 +98,7 @@ main {
 }
 .blurb {
   color: var(--text);
-  font-weight: 320;
+  font-weight: 300;
   font-size: 1rem;
   margin-bottom: 1.2rem;
 }
@@ -135,17 +135,11 @@ main {
 }
 .links a:hover { border-color: var(--accent); color: var(--accent); }
 .links i, .links .ai { color: var(--accent); }
-/* Email as plain text, not a pill button */
-.links a.link-text {
-  border: none;
-  padding: 0.45rem 0;
-  font-weight: 400;
-  color: var(--text-soft);
-}
-.links a.link-text:hover { color: var(--accent); }
 
 /* ===== Sections ===== */
 section { margin-bottom: 3rem; }
+/* Keep anchored headings clear of the sticky nav */
+section, .intro { scroll-margin-top: 4.5rem; }
 h2 {
   font-size: 1.5rem;
   font-weight: 700;
@@ -162,6 +156,8 @@ h2 {
   color: var(--text);
   padding: 0.35rem 0;
 }
+.news-list a { color: var(--accent); text-decoration: none; }
+.news-list a:hover { text-decoration: underline; }
 .news-date {
   display: inline-block;
   min-width: 68px;
@@ -188,7 +184,13 @@ h2 {
 
 /* ===== Publications ===== */
 .pub { padding: 0.9rem 0; border-bottom: 1px solid var(--border); }
-.pub:last-child { border-bottom: none; }
+.pub:last-child, .pub:has(+ .pub-subhead) { border-bottom: none; }
+.pub-subhead {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-top: 1.6rem;
+  margin-bottom: 0.2rem;
+}
 .pub-title { font-weight: 600; font-size: 0.98rem; }
 .pub-authors { color: var(--text-soft); font-size: 0.9rem; font-weight: 300; margin: 0.15rem 0; }
 .pub-venue { font-size: 0.88rem; color: var(--text-soft); font-weight: 300; }
@@ -202,7 +204,6 @@ h2 {
   text-align: left;
 }
 .map-wrap img { max-width: 100%; }
-.map-fallback { color: var(--text-soft); font-size: 0.85rem; font-weight: 300; }
 
 /* ===== Footer ===== */
 footer {
@@ -222,12 +223,3 @@ footer {
   .intro { flex-direction: column-reverse; align-items: center; text-align: center; }
   .links { justify-content: center; }
 }
-
-/* Icon-only social links */
-.links a.icon-only {
-  padding: 0.45rem 0.7rem;
-  color: var(--accent);
-}
-.links a.icon-only svg { display: block; }
-.links a.icon-only:hover { border-color: var(--accent); }
-.links a.icon-only:hover svg, .links a.icon-only:hover i { color: var(--accent); }

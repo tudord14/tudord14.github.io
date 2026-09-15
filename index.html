@@ -12,8 +12,17 @@
   <!-- Font Awesome 6 (brands include Google Scholar icon) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <!-- Academicons: real Google Scholar icon -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.4/css/academicons.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
+  <!-- Apply saved/system theme before first paint to avoid a light flash -->
+  <script>
+    (function () {
+      var theme;
+      try { theme = localStorage.getItem("theme"); } catch (e) {}
+      if (!theme) theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      if (theme === "dark") document.documentElement.setAttribute("data-theme", "dark");
+    })();
+  </script>
 </head>
 <body>
   <!-- ===== TOP NAV ===== -->
@@ -38,7 +47,7 @@
         <h1>Tudor Andrei Diac</h1>
         <p class="blurb">
           🐉 Hi! I'm a recent MSc graduate (Distinction) in Computational Science
-          (Scientific Computing) at Lund University, where I wrote my thesis on the
+          (Scientific Computing) at Lund University, where I wrote my <a href="https://lup.lub.lu.se/student-papers/search/publication/9236135">thesis</a> on the
           development and optimization of small language models, supervised by
           <a href="https://www.bjorkelund.org/anders/index.html">Anders Björkelund</a>.
           Before Lund, I completed a BSc in Physics Informatics at the University of
@@ -64,9 +73,9 @@
     <section id="news">
       <h2>News</h2>
       <ul class="news-list">
-        <li><span class="news-date">2026.06</span> 
+        <li><span class="news-date">2026.06</span>
           Completed my MSc in Computational Science (Scientific Computing) at Lund University, with Distinction.
-          Thesis: "Pretraining, Quantization and Evaluation of Romanian Small Language Models"
+          Thesis: <a href="https://lup.lub.lu.se/student-papers/search/publication/9236135">"Pretraining, Quantization, and Evaluation of Romanian Small Language Models"</a>
         </li>
       </ul>
     </section>
@@ -113,6 +122,13 @@
         <p class="pub-title">Scale-free to Pareto-Tsallis transitions in the distributions of waiting times</p>
         <p class="pub-authors">A. Nicolin-Żaczek, P.-A. Gogîță, T.-G. Dumitru, F.-I. Constantin, <strong>T. A. Diac</strong>, A. Neagoe, M.-C. Raportaru</p>
         <p class="pub-venue">Journal of Physics: Complexity, 2026. <a href="https://doi.org/10.1088/2632-072X/ae8aa5">DOI</a></p>
+      </div>
+
+      <h3 class="pub-subhead">Theses</h3>
+      <div class="pub">
+        <p class="pub-title">Pretraining, Quantization, and Evaluation of Romanian Small Language Models</p>
+        <p class="pub-authors"><strong>T. A. Diac</strong>; supervised by A. Björkelund</p>
+        <p class="pub-venue">MSc thesis, Lund University, 2026. <a href="https://lup.lub.lu.se/student-papers/search/publication/9236135">LUP</a></p>
       </div>
     </section>
 
